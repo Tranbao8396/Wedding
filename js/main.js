@@ -21,29 +21,6 @@ $(window).on("load", function() {
 
 /***/ }),
 
-/***/ "./_js/modules/hover.js":
-/*!******************************!*\
-  !*** ./_js/modules/hover.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-$(".card-info").each(
-  function(index,element) {
-    $(this).addClass('card-info-'+index);
-
-    $(".card-info-"+index).hover(
-      function() {
-        $("#about").toggleClass('hover-'+index);
-      }
-    )
-  }
-);
-
-
-/***/ }),
-
 /***/ "./_js/modules/navbar-scroll.js":
 /*!**************************************!*\
   !*** ./_js/modules/navbar-scroll.js ***!
@@ -54,11 +31,9 @@ $(".card-info").each(
 $(window).on("scroll", function(){
   var $scroll = $(window).scrollTop();
   if ($scroll >= 744) {
-    $(".navbar-fixed-top").css("background-color", "#fff");
-    $(".navbar-fixed-top .nav-link").css("color", "#000");
+    $(".navbar-fixed-top .container-fluid").css("flex-direction", "row");
   } else {
-    $(".navbar-fixed-top").css("background-color", "transparent");
-    $(".navbar-fixed-top .nav-link").css("color", "#fff");
+    $(".navbar-fixed-top .container-fluid").css("flex-direction", "column");
   }
 });
 
@@ -33156,19 +33131,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper */ "./_js/modules/swiper.js");
 /* harmony import */ var _modules_text_fluffy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/text-fluffy */ "./_js/modules/text-fluffy.js");
 /* harmony import */ var _modules_text_fluffy__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_text_fluffy__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_hover__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/hover */ "./_js/modules/hover.js");
-/* harmony import */ var _modules_hover__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_hover__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothscroll */ "./_js/modules/smoothscroll.js");
-/* harmony import */ var _modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/navbar-scroll */ "./_js/modules/navbar-scroll.js");
-/* harmony import */ var _modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_aos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/aos */ "./_js/modules/aos.js");
+/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smoothscroll */ "./_js/modules/smoothscroll.js");
+/* harmony import */ var _modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/navbar-scroll */ "./_js/modules/navbar-scroll.js");
+/* harmony import */ var _modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar_scroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_aos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/aos */ "./_js/modules/aos.js");
 
 
 
 // import "./modules/navbar-active"
 
 
-
+// import "./modules/hover";
 
 
 

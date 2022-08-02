@@ -5,23 +5,35 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 0;
   padding: 30px;
-  background: url("../img/common/fv.gif") 0 0 / cover no-repeat;
+  background: url("../img/common/bg.jpg") 0 0 / cover no-repeat;
   border: 0;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    content: "";
+  }
 
   @include media-breakpoint-down(md) {
     padding: 15px;
   }
 
   .title {
-    font-size: 43px;
+    position: relative;
+    font-size: 52px;
     font-weight: bold;
-    font-family: $font-oswald;
+    font-family: $font-hand;
     color: #fff;
+    z-index: 1;
 
     @include media-breakpoint-down(md) {
       font-size: 8vw;
@@ -29,8 +41,11 @@
   }
 
   .text-small {
+    position: relative;
     font-size: 24px;
+    font-family: $font-tail;
     color: #fff;
+    z-index: 1;
 
     @include media-breakpoint-down(md) {
       font-size: 5vw;
@@ -47,6 +62,13 @@
     text-align: center;
     margin: 0 auto;
     transition: all .3s ease;
+    font-size: 23px;
+    font-family: $font-hand;
+    z-index: 1;
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
 
     &:hover {
       opacity: .7;
@@ -109,7 +131,7 @@
 .title-black {
   font-size: 32px;
   font-weight: bold;
-  font-family: $font-oswald;
+  font-family: $font-hand;
 
   small {
     display: block;
