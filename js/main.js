@@ -31,9 +31,9 @@ $(window).on("load", function() {
 $(window).on("scroll", function(){
   var $scroll = $(window).scrollTop();
   if ($scroll >= 744) {
-    $(".navbar-fixed-top .container-fluid").css("flex-direction", "row");
+    $(".navbar-fixed-top .navbar-brand .img-fluid").css("height", "0");
   } else {
-    $(".navbar-fixed-top .container-fluid").css("flex-direction", "column");
+    $(".navbar-fixed-top .navbar-brand .img-fluid").css("height", "39");
   }
 });
 
